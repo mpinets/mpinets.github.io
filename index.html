@@ -10,53 +10,57 @@
     <title></title>
   </head>
   <body>
-    <div class="body">
-      <div>
-        <div class="headerWrapper">
-          <div class="headerItem title"><a>Motion Policy Networks</a></div>
-      </div>
-      <div class="project">
-        <div class="projectItem image projectImage">
-          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/hIWdQTq8AqQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div id="container">
+      <div class="banner">
+        <div class="banner-text">
+          <h1 class="title">Motion Policy Networks</h1>
+          <h2 class="author">
+            <a href="https://fishbotics.com" target="_blank">Adam Fishman</a><sup>1,2</sup>,
+            <a href="http://adithyamurali.com/" target="_blank">Adithyavairan Mural</a><sup>2</sup>,
+            <a href="https://clemense.github.io/" target="_blank">Clemens Eppner</a><sup>2</sup>,
+          </h2>
+          <h2 class="author">
+            <a href="http://www.gnarlydesign.io/" target="_blank">Bryan Peele</a><sup>2</sup>,
+            <a href="https://homes.cs.washington.edu/~bboots/" target="_blank">Byron Boots</a><sup>1,2</sup>,
+            <a href="https://https://homes.cs.washington.edu/~fox/" target="_blank">Dieter Fox</a><sup>1,2</sup>
+          </h2>
+          <p class="institutions"><sup>1</sup>University of Washington, <sup>2</sup>NVIDIA</p>
         </div>
-        <div class="projectItem descriptionWrapper">
-          <div class="description">
-            <p class="projectTitle">
-            </p>
-						<p>
-            Submission Video
-            </p>
+      </div>
+      <!--<div id="cover-image"></div>-->
+      <div id="cover-wrapper">
+        <img src="static/cover_split.png", alt="Motion Policy Networks are trained in sim and transfer to the real world" id="cover-image"></img>
+      </div>
+      <div class="line"></div>
+      <div class="section">
+        <h3>Abstract</h3>
+        <p>Collision-free motion generation in unknown environments is a core building block for robot manipulation.
+  Generating such motions is challenging due to multiple objectives; not only should the solutions be optimal, the motion generator itself must be fast enough for real-time performance and reliable enough for practical deployment.
+  A wide variety of methods have been proposed ranging from local controllers to global planners, often being combined to offset their shortcomings. We present an end-to-end neural model called Motion Policy Networks (MπNets) to generate collision-free, smooth motion from just a single depth camera observation. MπNets are trained on over 3 million motion planning problems in over 500,000 environments.
+  Our experiments show that MπNets are significantly faster than global planners while exhibiting the reactivity needed to deal with dynamic scenes. They are <em>46%</em> better than prior neural planners and more robust than local control policies. Despite being only trained in simulation, MπNets transfer well to the real robot with noisy partial point clouds.</p>
+      </div>
+      <div class="line"></div>
+      <div class="section">
+        <div class="video-wrapper">
+          <div class="slide">
+            <iframe class="youtube-video" src="https://www.youtube-nocookie.com/embed/hIWdQTq8AqQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="video-wrapper">
+          <div class="slide">
+            <iframe class="youtube-video" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLTG3E67_prwtn6JpJ-ovDOvCFzEEvIXnH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="video-wrapper">
+          <div class="slide">
+            <iframe class="youtube-video" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLTG3E67_prwsxVarSDkyWPSQBDrLU3JBM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
       </div>
-      <div class="project">
-        <div class="projectItem image projectImage">
-          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLTG3E67_prwtn6JpJ-ovDOvCFzEEvIXnH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div class="projectItem descriptionWrapper">
-          <div class="description">
-            <p class="projectTitle">
-            </p>
-						<p>
-           Open Loop Demonstrations
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="project">
-        <div class="projectItem image projectImage">
-          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLTG3E67_prwsxVarSDkyWPSQBDrLU3JBM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div class="projectItem descriptionWrapper">
-          <div class="description">
-            <p class="projectTitle">
-            </p>
-						<p>
-            Closed Loop, Dynamic Scene Demonstrations
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+      <div class="line"></div>
+        <h3>Acknowledgements</h3>
+        <p>We would like to thank the many people who have assisted in this research. In particular, we would like to thank Mike Skolones for supporting this research at NVIDIA,
+        <a href="https://balakumar-s.github.io/">Balakumar Sundaralingam</a> and <a href="https://scholar.google.com/citations?user=TCYAoF8AAAAJ">Karl Van Wyk</a> for their help in evaluating MπNets and benchmarking it against STORM and Geometric Fabrics respectively; <a href="https://ankurhanda.github.io/">Ankur Handa</a>, <a href="https://chrisdxie.github.io/">Chris Xie</a>, <a href="https://cs.gmu.edu/~amousavi/">Arsalan Mousavian</a>, <a href="https://danielgordon10.github.io/">Daniel Gordon</a>, and <a href="https://aaronwalsman.com/">Aaron Walsman</a> for their ideas on network architecture, 3D machine learning, and training; <a href="https://scholar.google.com/citations?user=4bl7qAgAAAAJ">Nathan Ratliff</a> and <a href="https://cpaxton.github.io/">Chris Paxton</a> for their help in shaping the idea early-on; <a href="https://adityavk.com/">Aditya Vamsikrishna</a>, <a href="https://rosarioscalise.com/">Rosario Scalise</a>, <a href="https://www.brianhou.com/">Brian Hou</a>, and <a href="https://scholar.google.com/citations?user=NkjjAE8AAAAJ">Shohin Mukherjee</a> for their help in exploring ideas for the expert pipeline, <a href="https://scholar.google.ca/citations?user=zeS5UJEAAAAJ&hl=en">Jonathan Tremblay</a> for his visualization expertise, <a href="https://scholar.google.com/citations?user=48Y9F-YAAAAJ">Yu-Wei Chao</a> and <a href="https://yxyang.github.io/">Yuxiang Yang</a> for their help with using the Pybullet simulator, and <a href="https://www.linkedin.com/in/jennifermayer3/">Jennifer Mayer</a> for editing the final paper.</p>
+  </div>
   </body>
 </html>

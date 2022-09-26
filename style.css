@@ -8,13 +8,17 @@ body {
   height: 100%;
   margin: 10px;
   color: #531BDB;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Roboto, sans-serif;
   font-weight: 300;
   font-size: 16px;
 }
 
 #container {
   width: 940px;
+}
+
+#footer {
+  height: 30px;
 }
 
 a {
